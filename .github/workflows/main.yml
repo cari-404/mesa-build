@@ -28,7 +28,7 @@ jobs:
         sudo apt install ./pkgconf_1.8.0-1_amd64.deb
         sudo apt remove llvm-13-dev
         sudo apt install meson ninja-build libvdpau-dev glslang-tools libomxil-bellagio-dev libva-dev libdrm-dev libdrm-intel1 libudev-dev llvm llvm-15 llvm-15-dev
-        sudo apt install libelf-dev libglvnd-dev libunwind-dev libwayland-egl-backend-dev
+        sudo apt install libelf-dev libglvnd-dev libunwind-dev libwayland-egl-backend-dev libxfixes-dev
         sudo apt install ./directx-headers-dev_1.611.0-1_amd64.deb
         sudo apt install ./llvm-runtime_15.0-56~exp2_amd64.deb
         sudo apt install ./llvm_15.0-56~exp2_amd64.deb
