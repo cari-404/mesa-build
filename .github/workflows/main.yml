@@ -20,6 +20,8 @@ jobs:
         wget http://launchpadlibrarian.net/619293808/libalpm13_6.0.1-4_amd64.deb
         wget http://launchpadlibrarian.net/564413289/pkgconf_1.8.0-1_amd64.deb
         wget http://launchpadlibrarian.net/619293809/makepkg_6.0.1-4_amd64.deb
+        sudo dpkg -i libalpm13_6.0.1-4_amd64.deb
+        sudo dpkg -i pkgconf_1.8.0-1_amd64.debs
         sudo dpkg -i makepkg_6.0.1-4_amd64.deb
         pacman --version
     - name: Download Build
