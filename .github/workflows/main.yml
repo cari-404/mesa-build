@@ -29,6 +29,7 @@ jobs:
       run: |
         curl "https://aur.archlinux.org/cgit/aur.git/snapshot/mesa-git.tar.gz" -o mesa-git.tar.gz
         tar -xvf mesa-git.tar.gz
+        cp PKGBUILD mesa-git/PKGBUILD
     - name: Build
       run: |
         cd mesa-git
