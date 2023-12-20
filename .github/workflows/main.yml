@@ -62,4 +62,4 @@ jobs:
       with:
         tag_name: v1.1.1-test
         files: |
-          *.pkg.tar.gz
+          mesa-git/*.pkg.tar.gz
