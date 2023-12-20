@@ -23,14 +23,16 @@ jobs:
         wget http://mirrors.kernel.org/ubuntu/pool/universe/d/directx-headers/directx-headers-dev_1.611.0-1_amd64.deb
         wget http://mirrors.kernel.org/ubuntu/pool/universe/l/llvm-defaults/llvm_15.0-56~exp2_amd64.deb
         wget http://mirrors.kernel.org/ubuntu/pool/universe/l/llvm-defaults/llvm-runtime_15.0-56~exp2_amd64.deb
+        wget http://mirrors.kernel.org/ubuntu/pool/main/w/wayland-protocols/wayland-protocols_1.31-1_all.deb
         sudo dpkg -i libalpm13_6.0.1-4_amd64.deb
         sudo apt install ./pkgconf_1.8.0-1_amd64.deb
         sudo apt remove llvm-13-dev
         sudo apt install meson ninja-build libvdpau-dev glslang-tools libomxil-bellagio-dev libva-dev libdrm-dev libdrm-intel1 libudev-dev llvm llvm-15 llvm-15-dev
-        sudo apt install libelf-dev libglvnd-dev libunwind-dev wayland-protocols
+        sudo apt install libelf-dev libglvnd-dev libunwind-dev
         sudo apt install ./directx-headers-dev_1.611.0-1_amd64.deb
         sudo apt install ./llvm-runtime_15.0-56~exp2_amd64.deb
         sudo apt install ./llvm_15.0-56~exp2_amd64.deb
+        sudo apt install ./wayland-protocols_1.31-1_all.deb
         pip install Mako
         sudo dpkg -i makepkg_6.0.1-4_amd64.deb
         pacman --version
