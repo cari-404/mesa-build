@@ -20,9 +20,11 @@ jobs:
         wget http://launchpadlibrarian.net/619293808/libalpm13_6.0.1-4_amd64.deb
         wget http://launchpadlibrarian.net/564413289/pkgconf_1.8.0-1_amd64.deb
         wget http://launchpadlibrarian.net/619293809/makepkg_6.0.1-4_amd64.deb
+        wget http://mirrors.kernel.org/ubuntu/pool/universe/d/directx-headers/directx-headers-dev_1.611.0-1_amd64.deb
         sudo dpkg -i libalpm13_6.0.1-4_amd64.deb
         sudo apt install ./pkgconf_1.8.0-1_amd64.deb
-        sudo apt install meson ninja-build directx-headers-dev
+        sudo apt install meson ninja-build
+        sudo apt install ./directx-headers-dev_1.611.0-1_amd64.deb
         sudo dpkg -i makepkg_6.0.1-4_amd64.deb
         pacman --version
     - name: Download Build
