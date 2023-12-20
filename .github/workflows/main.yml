@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  contents: write
+
 jobs:
   build:
 
@@ -54,4 +57,9 @@ jobs:
         cd ../..
         makepkg -se
         ls -R
-
+    - name: Release binary to GitHub
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: v1.1.1-test
+        files: |
+          *.pkg.tar.gz
