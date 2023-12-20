@@ -28,6 +28,7 @@ jobs:
         sudo apt remove llvm-13-dev
         sudo apt install meson ninja-build libvdpau-dev glslang-tools libomxil-bellagio-dev libva-dev libdrm-dev libdrm-intel1 libudev-dev llvm llvm-15 llvm-15-dev
         sudo apt install ./directx-headers-dev_1.611.0-1_amd64.deb
+        sudo apt install ./llvm-runtime_17.0-58~exp1_amd64.deb
         sudo apt install ./llvm_17.0-58~exp1_amd64.deb
         pip install Mako
         sudo dpkg -i makepkg_6.0.1-4_amd64.deb
