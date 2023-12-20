@@ -33,6 +33,8 @@ jobs:
         cd mesa-git
         makepkg -so
         cd src/mesa
+        git config --global user.email "firdiansyaindrianto@gmail.com"
+        git config --global user.name "cari-404"
         curl -L "https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/26165.patch" | git am
         cd ../..
         makepkg -sei
