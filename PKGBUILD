@@ -155,7 +155,7 @@ build () {
        -D prefix=/usr \
        -D sysconfdir=/etc
        
-    meson configure _build
+    meson configure --no-pager _build
     
     ninja $NINJAFLAGS -C _build
 }
