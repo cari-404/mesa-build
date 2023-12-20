@@ -17,6 +17,10 @@ jobs:
       run: |
         wget https://gitlab.com/trivoxel-utils/deb-pacman/uploads/460d83f8711c1ab5e16065e57e7eeabc/deb-pacman-2.0-0.deb
         sudo dpkg -i deb-pacman-2.0-0.deb
+        wget http://launchpadlibrarian.net/619293808/libalpm13_6.0.1-4_amd64.deb
+        wget http://launchpadlibrarian.net/564413289/pkgconf_1.8.0-1_amd64.deb
+        wget http://launchpadlibrarian.net/619293809/makepkg_6.0.1-4_amd64.deb
+        sudo dpkg -i makepkg_6.0.1-4_amd64.deb
         pacman --version
     - name: Download Build
       run: |
