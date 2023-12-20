@@ -21,11 +21,13 @@ jobs:
         wget http://launchpadlibrarian.net/564413289/pkgconf_1.8.0-1_amd64.deb
         wget http://launchpadlibrarian.net/619293809/makepkg_6.0.1-4_amd64.deb
         wget http://mirrors.kernel.org/ubuntu/pool/universe/d/directx-headers/directx-headers-dev_1.611.0-1_amd64.deb
+        wget http://mirrors.kernel.org/ubuntu/pool/universe/l/llvm-defaults/llvm_17.0-58~exp1_amd64.deb
         sudo dpkg -i libalpm13_6.0.1-4_amd64.deb
         sudo apt install ./pkgconf_1.8.0-1_amd64.deb
         sudo apt remove llvm-13-dev
         sudo apt install meson ninja-build libvdpau-dev glslang-tools libomxil-bellagio-dev libva-dev libdrm-dev libdrm-intel1 libudev-dev llvm llvm-15 llvm-15-dev
         sudo apt install ./directx-headers-dev_1.611.0-1_amd64.deb
+        sudo apt install ./llvm_17.0-58~exp1_amd64.deb
         pip install Mako
         sudo dpkg -i makepkg_6.0.1-4_amd64.deb
         pacman --version
