@@ -1,0 +1,32 @@
+name: Mesa-Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Dependency
+      run: |
+        wget https://gitlab.com/trivoxel-utils/deb-pacman/uploads/460d83f8711c1ab5e16065e57e7eeabc/deb-pacman-2.0-0.deb
+        sudo dpkg -i deb-pacman-2.0-0.deb
+        pacman --version
+    - name: Download Build
+      run: |
+        curl "https://aur.archlinux.org/cgit/aur.git/snapshot/mesa-git.tar.gz" -o mesa-git.tar.gz
+        tar -xvf mesa-git.tar.gz
+    - name: Build
+      run: |
+        cd mesa-git
+        makepkg -so
+        cd src/mesa
+        curl -L "https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/26165.patch" | git am
+        cd ../..
+        makepkg -sei
