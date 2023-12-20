@@ -23,7 +23,7 @@ jobs:
         wget http://mirrors.kernel.org/ubuntu/pool/universe/d/directx-headers/directx-headers-dev_1.611.0-1_amd64.deb
         sudo dpkg -i libalpm13_6.0.1-4_amd64.deb
         sudo apt install ./pkgconf_1.8.0-1_amd64.deb
-        sudo apt install meson ninja-build libvdpau-dev glslang-tools libomxil-bellagio-dev
+        sudo apt install meson ninja-build libvdpau-dev glslang-tools libomxil-bellagio-dev libva-dev
         sudo apt install ./directx-headers-dev_1.611.0-1_amd64.deb
         sudo dpkg -i makepkg_6.0.1-4_amd64.deb
         pacman --version
