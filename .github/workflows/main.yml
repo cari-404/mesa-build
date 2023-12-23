@@ -50,7 +50,7 @@ jobs:
       run: |
         cd mesa-git
         makepkg -so
-        makepkg -sei
+        makepkg -se
         ls -R
         cd ..
         7z a mesa.7z *
