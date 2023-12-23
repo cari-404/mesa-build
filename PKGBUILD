@@ -123,7 +123,7 @@ build () {
        -D b_ndebug=true \
        -D b_lto=false \
        -D platforms=x11,wayland \
-       -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,i915,iris,crocus,zink,d3d12 \
+       -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,i915,iris,crocus,zink \
        -D vulkan-drivers=amd,intel,swrast,virtio,intel_hasvk \
        -D vulkan-layers=device-select,overlay \
        -D dri3=enabled \
