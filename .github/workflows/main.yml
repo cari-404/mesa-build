@@ -50,16 +50,14 @@ jobs:
       run: |
         cd mesa-git
         makepkg -so
-        cd src/mesa
-        git config --global user.email "firdiansyaindrianto@gmail.com"
-        git config --global user.name "cari-404"
-        curl -L "https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/26165.patch" | git am
-        cd ../..
-        makepkg -se
+        makepkg -sei
         ls -R
+        cd ..
+        7z a mesa.7z *
     - name: Release binary to GitHub
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: v1.1.1-test
+        tag_name: v1.2
         files: |
           mesa-git/*.pkg.tar.gz
+          mesa.7z
