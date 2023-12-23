@@ -149,7 +149,7 @@ build () {
        -D valgrind=disabled \
        -D tools=[] \
        -D zstd=enabled \
-       -D video-codecs=all,vc1dec,h264dec,h264enc,h265dec,h265enc,av1dec,av1enc,vp9dec \
+       -D video-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc,av1dec,av1enc,vp9dec \
        -D buildtype=plain \
        --wrap-mode=nofallback \
        -D prefix=/usr \
